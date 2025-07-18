@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        border: 'hsl(var(--border))',
         pineapple: {
           50: '#fefce8',
           100: '#fef9c3',
