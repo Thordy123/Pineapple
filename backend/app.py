@@ -29,11 +29,11 @@ class PineappleAnalyzer:
             from ultralytics import YOLO
             
             # Load your custom model
-            model_path = os.path.join(os.path.dirname(__file__), '..', 'pineapple_pen.pt')
+            model_path = os.path.join(os.path.dirname(__file__), 'models', 'pineapple_pen.pt')
             if os.path.exists(model_path):
                 self.model = torch.load(model_path, map_location='cpu')
                 self.model.eval()
-                logger.info("Successfully loaded pineapple_pen.pt model")
+                logger.info(f"Successfully loaded pineapple_pen.pt model from {model_path}")
             else:
                 logger.warning(f"Model file not found at {model_path}")
             
